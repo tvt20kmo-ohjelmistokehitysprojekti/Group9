@@ -2,22 +2,11 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-// This can be removed if you use __autoload() in config.php OR use Modular Extensions
-/** @noinspection PhpIncludeInspection */
+
 require APPPATH . 'libraries/REST_Controller.php';
 
-/**
- * This is an example of a RestApi based on PHP and CodeIgniter 3.
- * 
- *
- * @package         CodeIgniter
- * @subpackage      Rest Server
- * @category        Controller
- * @author          Pekka Alaluukas (edited the version made by Phil Sturgeon & Chris Kacerguis)
- * @license         MIT
- * @link            https://github.com/chriskacerguis/codeigniter-restserver
- */
-class Account extends REST_Controller 
+
+class Transactions extends REST_Controller 
 {
 
     function __construct()
@@ -31,14 +20,18 @@ class Account extends REST_Controller
         $this->load->model('Transactions_model');
     }
 
-    public function transactions_post()
+    public function transactions_post($client_id, $accType)
     {
     // book from a data store e.g. database  
 
-        $id = $this->post('id');
+        $client_id = $this->post('client_id');
+        $call_procedure= "CALL get_acc_transactions(?,?)";
+        $data=array('CID'=>$client_id, 'AType'=>$accType);
+        $query=$this->db->query($call_procedure, $data);
+
 
         // If the id parameter doesn't exist return all books
-        if ($id === NULL)
+        if ($client_id === NULL)
         {
             $transactions=$this->Transactions_model->post_transactions(NULL);
             // Check if the book data store contains book (in case the database result returns NULL)
@@ -61,14 +54,14 @@ class Account extends REST_Controller
         else 
         {   
             // Validate the id.
-            if ($id <= 0)
+            if ($client_id <= 0)
             {
                 // Invalid id, set the response and exit.
                 $this->response(NULL, REST_Controller::HTTP_BAD_REQUEST); // BAD_REQUEST (400) being the HTTP response code
             }
 
             // Get the user from the database, using the id as key for retrieval.
-            $transactions=$this->Transactions_model->post_transactions($id);
+            $transactions=$this->Transactions_model->post_transactions($client_id);
             if (!empty($transactions))
             {
                 $this->set_response($transactions, REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
