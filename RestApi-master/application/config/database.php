@@ -78,7 +78,9 @@ $db['default'] = array(
 	'hostname' => 'localhost',	//mysli.oamk.fi sit lopulta
 	'username' => 'root',	//myslin tunnari sit lopulta
 	'password' => 'test',	//myslin passu sit lopulta
-	'database' => 'opisk_t9jyan00',	//käytettävä database omalla kohdalla opisk_t9arar00
+ Withdraw
+	'database' => 'opisk_t9vaii00',	//käytettävä database omalla kohdalla opisk_t9arar00
+ main
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
