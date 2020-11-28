@@ -58,20 +58,14 @@ $route['translate_uri_dashes'] = TRUE;
 | Sample REST API Routes
 | -------------------------------------------------------------------------
 */
+/*$route['api/book/book/(:num)'] = 'api/book/book/id/$1';
+$route['api/user/user/(:num)'] = 'api/user/user/id/$1';
+$route['api/book/book/(:num)'] = 'api/book/book/id/$1';*/
 
-$route['api/account/account/(:num)'] = '/api/account/account/id/$1';
-$route['api/account/account/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = '/api/account/account/id/$1/format/$3$4';
+$route['Api/RestApi-master/account/account/(:num)'] = 'Api/RestApi-master/account/account/$1';
+$route['Api/RestApi-master/client/client/(:num)'] = 'Api/RestApi-master/client/client/$1';
+$route['Api/RestApi-master/action/action/(:num)'] = 'Api/RestApi-master/action/action/$1';
 
-$route['api/client/client/(:num)'] = '/api/client/client/id/$1';
-$route['api/client/client/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = '/api/client/client/id/$1/format/$3$4';
-
-$route['api/action/action/(:num)'] = '/api/action/action/id/$1';
-$route['api/action/action/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = '/api/action/action/id/$1/format/$3$4';
-
-
-$route['api/withdraw/withdraw/(:num)'] = '/api/withdraw/withdraw/id/$1';
-$route['api/withdraw/withdraw/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = '/api/withdraw/withdraw/id/$1/format/$3$4';
-
-$route['api/transactions/transactions/(:num)'] = '/api/transactions/transactions/id/$1';
-$route['api/transactions/transactions/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = '/api/transactions/transactions/id/$1/format/$3$4';
-
+$route['Api/RestApi-master/account/account/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = 'Api/RestApi-master/account/account/id/$1/format/$3$4'; 
+$route['Api/RestApi-master/client/client/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = 'Api/RestApi-master/client/client/id/$1/format/$3$4'; 
+$route['Api/RestApi-master/action/action/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = 'Api/RestApi-master/action/action/id/$1/format/$3$4'; 
