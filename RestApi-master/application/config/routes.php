@@ -68,8 +68,7 @@ $route['api/client/client/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = '/api/client/client
 $route['api/action/action/(:num)'] = '/api/action/action/id/$1';
 $route['api/action/action/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = '/api/action/action/id/$1/format/$3$4';
 
-$route['api/book/book/(:num)'] = '/api/book/book/id/$1';
-$route['api/user/user/(:num)'] = 'api/user/user/id/$1';
+$route['api/deposit/deposit/(:num)'] = '/api/deposit/deposit/id/$1';
+$route['api/deposit/deposit/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = '/api/deposit/deposit/id/$1/format/$3$4';
 
-$route['api/book/book/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = '/api/book/book/id/$1/format/$3$4'; 
 
