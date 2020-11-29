@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',	//mysli.oamk.fi sit lopulta
-	'username' => 'root',	//myslin tunnari sit lopulta
-	'password' => 'test',	//myslin passu sit lopulta
-	'database' => 'opisk_t9vaii00',	//käytettävä database omalla kohdalla oma database
+	'hostname' => 'localhost',
+	'username' => 'ruut',
+	'password' => 'test',
+	'database' => 'opisk_t9jyan00',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
