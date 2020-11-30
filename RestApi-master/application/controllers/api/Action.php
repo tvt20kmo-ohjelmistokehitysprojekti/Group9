@@ -13,13 +13,12 @@ require APPPATH . 'libraries/REST_Controller.php';
  * @package         CodeIgniter
  * @subpackage      Rest Server
  * @category        Controller
- * @author          Pekka Alaluukas (edited the version made by Phil Sturgeon & Chris Kacerguis)
+ * @author          Tuure Vairio--> Pekka Alaluukas (edited the version made by Phil Sturgeon & Chris Kacerguis)
  * @license         MIT
  * @link            https://github.com/chriskacerguis/codeigniter-restserver
  */
 class Action extends REST_Controller 
 {
-
     function __construct()
     {
         //enable cors
