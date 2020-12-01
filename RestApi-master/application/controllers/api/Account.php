@@ -41,7 +41,7 @@ class Account extends REST_Controller
         if ($id === NULL)
         {
             $account=$this->Account_model->get_account(NULL);
-            // Check if the book data store contains book (in case the database result returns NULL)
+            // Check if the book data store contains any accounts (in case the database result returns NULL)
             if ($account)
             {
                 // Set the response and exit
@@ -57,7 +57,7 @@ class Account extends REST_Controller
             }
         }
 
-        // Find and return a single record for a particular user.
+        // Find and return a single record for a particular account.
         else 
         {   
             // Validate the id.
@@ -67,7 +67,7 @@ class Account extends REST_Controller
                 $this->response(NULL, REST_Controller::HTTP_BAD_REQUEST); // BAD_REQUEST (400) being the HTTP response code
             }
 
-            // Get the user from the database, using the id as key for retrieval.
+            // Get the account from the database, using the id as key for retrieval.
             $account=$this->Account_model->get_account($id);
             if (!empty($account))
             {
