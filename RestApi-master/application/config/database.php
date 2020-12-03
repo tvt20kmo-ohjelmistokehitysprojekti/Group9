@@ -76,9 +76,15 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',	//mysli.oamk.fi sit lopulta
+<<<<<<< HEAD
 	'username' => 'root',	//myslin tunnari sit lopulta
 	'password' => 'test',	//myslin passu sit lopulta
 	'database' => 'opisk_t9jyan00',	//käytettävä database omalla kohdalla oma database
+=======
+	'username' => 'ci_user',	//myslin tunnari sit lopulta
+	'password' => 'ci_pass',	//myslin passu sit lopulta
+	'database' => 'opisk_t9arar00',	//käytettävä database omalla kohdalla oma database
+>>>>>>> 3187a565d5b22d8998eddf026837d98d01355901
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
