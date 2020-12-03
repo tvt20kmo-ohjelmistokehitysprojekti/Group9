@@ -31,6 +31,7 @@ class Withdraw extends REST_Controller {
 
         $this->load->model('Withdraw_model');
     }
+   
 
     public function withdraw_post()
     {
@@ -40,21 +41,21 @@ class Withdraw extends REST_Controller {
 
         if($result)
         {
-            $message = [
-                'Withdraw' => $this->post('card_id'),
-                'Amount' => $this->post('amount'),
-                'message' => 'Completed'
-            ];
+          $message = [
+              'Withdraw' => $this->post('card_id'),
+              'Amount' => $this->post('amount'),
+              'message' => 'Completed'
+          ];
 
             $this->set_response($message, REST_Controller::HTTP_CREATED); // CREATED (201) being the HTTP response code
         }
         else
         {
+            // Set the response and exit
             $this->response([
                 'status' => FALSE,
                 'message' => 'Failed'
-            ],  REST_Controller::HTTP_CONFLICT);
+            ], REST_Controller::HTTP_CONFLICT); // CAN NOT CREATE (409) being the HTTP response code
         }
-
     }
 }

@@ -1,20 +1,19 @@
 <?php
-
+/**Procedure Tested manually on Mysli. working.
+ * Ready for testing with app... using procedure to 
+ * 1. decrease balance. 
+ * 2. add logg
+ */
 class Withdraw_model extends CI_model
 {
-
-function withdraw($card, $amount){
-        $data=array('acc'=>$card, 'amount'=>$amount);
-        $this->db->query("CALL withdrawal(?,?)",$data);
-        $result=$this->db->affected_rows();        
-        if($result>0){
-            return TRUE;
-        }
-        else{
-            return FALSE;
-        }
-
- 
-
+  function Withdraw($card, $amount){
+    $data = array('acc'=> $card,'amount'=> $amount);
+    $this->db->query("call withdrawal(?,?)",$data);
+    if($this->db->affected_rows()){
+      return TRUE;
     }
+    else {
+      return FALSE;
+    }
+  }
 }
