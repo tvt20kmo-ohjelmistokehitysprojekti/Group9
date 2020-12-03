@@ -184,6 +184,13 @@ class Client extends REST_Controller
         }
     }
 
-
+    public function idAccount_get(){
+        $this->load->model('Client_model');
+        $idClient=$this->get('idClient');
+        $accType=$this->get('accType');      
+        $result=$this->Client_model->get_idAccount($idClient, $accType);
+    
+        echo json_encode($result);
+    }
 
 }

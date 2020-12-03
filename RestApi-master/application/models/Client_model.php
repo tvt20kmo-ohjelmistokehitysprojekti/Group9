@@ -44,12 +44,19 @@ class Client_model extends CI_model
     }
   }
 
-  function check_login($username){
-    $this->db->select('password');
+  function check_login($idClient){
+    $this->db->select('Password');
     $this->db->from('client');
-    $this->db->where('username',$username);
-    return $this->db->get()->row('password');
+    $this->db->where('idClient',$idClient);
+    return $this->db->get()->row('Password');
   }
-  
 
+  function get_idAccount($idClient, $accType){
+    $this->db->select('idAccount');
+    $this->db->from('account');
+    $this->db->where('idClient', $idClient);
+    $this->db->where('accountType', $accType);
+    
+    return $this->db->get()->result();
+  }
 }
