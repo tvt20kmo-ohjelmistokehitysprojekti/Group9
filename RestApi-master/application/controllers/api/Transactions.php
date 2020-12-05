@@ -20,18 +20,23 @@ class Transactions extends REST_Controller
         $this->load->model('Transactions_model');
     }
 
-    public function transactions_post($client_id, $accType)
+    public function transactions_get()
     {
     // book from a data store e.g. database  
+    
+        $this->load->model('Transactions_model');
 
-        $client_id = $this->post('client_id');
-        $call_procedure= "CALL get_acc_transactions(?,?)";
+        $client_id = $this->get('client_id');
+        $accType = $this->get('accType');
+        /*$call_procedure= "CALL get_acc_events($client_id, $accType)";
         $data=array('CID'=>$client_id, 'AType'=>$accType);
-        $query=$this->db->query($call_procedure, $data);
+        $query=$this->db->query($call_procedure, $data);*/
+        $result=$this->Transactions_model->events($client_id, $accType);
+        echo json_encode($result);
 
-
+    }
         // If the id parameter doesn't exist return all books
-        if ($client_id === NULL)
+       /* if ($client_id === NULL)
         {
             $transactions=$this->Transactions_model->post_transactions(NULL);
             // Check if the book data store contains book (in case the database result returns NULL)
@@ -74,5 +79,5 @@ class Transactions extends REST_Controller
                 ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
             }
         }
-    }
+    }*/
 }
