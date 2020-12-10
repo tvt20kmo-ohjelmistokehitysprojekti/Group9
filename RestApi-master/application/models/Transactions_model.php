@@ -12,7 +12,7 @@ class Transactions_model extends CI_model
     if($client_id !== NULL) 
     {
       //$this->db->where('CID',$client_id);
-      echo "Löydetyt tapahtumat:";
+      //echo "Löydetyt tapahtumat:";
     }
     /*return $query->affected_rows();*/
     return $query->result_array();
