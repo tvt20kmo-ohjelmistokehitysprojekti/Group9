@@ -14,20 +14,23 @@ SOURCES += \
     main.cpp \
     login.cpp \
     options.cpp \
-    varsingleton.cpp
+    varsingleton.cpp \
+    withdraw.cpp
 
 HEADERS += \
     accevents.h \
     acctype.h \
     login.h \
     options.h \
-    varsingleton.h
+    varsingleton.h \
+    withdraw.h
 
 FORMS += \
     accevents.ui \
     acctype.ui \
     login.ui \
-    options.ui
+    options.ui \
+    withdraw.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
