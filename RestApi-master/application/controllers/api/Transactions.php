@@ -1,14 +1,12 @@
 <?php
-
+ 
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-
+ 
 require APPPATH . 'libraries/REST_Controller.php';
-
-
+ 
 class Transactions extends REST_Controller 
 {
-
+ 
     function __construct()
     {
         //enable cors
@@ -16,16 +14,24 @@ class Transactions extends REST_Controller
         header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
         // Construct the parent class
         parent::__construct();
-
+ 
         $this->load->model('Transactions_model');
     }
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> a4914acf537492ee8d4375e16d42581995ffeb89
     public function transactions_get()
     {
     // book from a data store e.g. database  
     
         $this->load->model('Transactions_model');
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> a4914acf537492ee8d4375e16d42581995ffeb89
         $client_id = $this->get('client_id');
         $accType = $this->get('accType');
         /*$call_procedure= "CALL get_acc_events($client_id, $accType)";
@@ -33,6 +39,11 @@ class Transactions extends REST_Controller
         $query=$this->db->query($call_procedure, $data);*/
         $result=$this->Transactions_model->events($client_id, $accType);
         echo json_encode($result);
+<<<<<<< HEAD
+ 
+    }
+}
+=======
 
     }
         // If the id parameter doesn't exist return all books
@@ -81,3 +92,4 @@ class Transactions extends REST_Controller
         }
     }*/
 }
+>>>>>>> a4914acf537492ee8d4375e16d42581995ffeb89
