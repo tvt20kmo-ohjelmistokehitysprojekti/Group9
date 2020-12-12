@@ -17,22 +17,22 @@ class Transactions extends REST_Controller
  
         $this->load->model('Transactions_model');
     }
- 
+
     public function transactions_get()
     {
     // book from a data store e.g. database  
     
         $this->load->model('Transactions_model');
- 
+
         $client_id = $this->get('client_id');
         $accType = $this->get('accType');
         /*$call_procedure= "CALL get_acc_events($client_id, $accType)";
         $data=array('CID'=>$client_id, 'AType'=>$accType);
         $query=$this->db->query($call_procedure, $data);*/
         $result=$this->Transactions_model->events($client_id, $accType);
-        echo json_encode($result);
- 
+        echo json_encode($result); 
     }
+  
     public function balance_get()
     {
         $this->load->model('Transactions_model');
