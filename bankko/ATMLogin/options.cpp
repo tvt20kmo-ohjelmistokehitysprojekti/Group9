@@ -4,6 +4,8 @@
 #include "varsingleton.h"
 #include "saldoform.h"
 #include "withdraw2.h"
+#include "clientadder.h"
+#include "deposit.h"
 
 #include <QtNetwork>
 #include <QNetworkAccessManager>
@@ -128,4 +130,11 @@ void Options::on_btnWithdraw_clicked()
     Withdraw2 *var=new Withdraw2();
     var->show();
     this->close();
+}
+
+void Options::on_btnDeposit_clicked()
+{
+
+    Deposit *ca=new Deposit();
+    ca->show();
 }

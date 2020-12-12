@@ -33,6 +33,17 @@ void VarSingleton::setAccType(const QString &value)
     accType = value;
 }
 
+QString VarSingleton::getTotalAmount() const
+{
+    return totalAmount;
+}
+
+void VarSingleton::setTotalAmount(double value)
+{
+
+    totalAmount=value;
+}
+
 VarSingleton* VarSingleton::getInstance()
 {
     if (instance == nullptr)

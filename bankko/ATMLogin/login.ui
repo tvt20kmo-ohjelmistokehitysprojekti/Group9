@@ -302,6 +302,19 @@
      <string>3</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btnClientInterface">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Client DO NOT PRESS</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -309,7 +322,7 @@
      <x>0</x>
      <y>0</y>
      <width>650</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

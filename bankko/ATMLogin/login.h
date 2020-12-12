@@ -22,6 +22,8 @@ private slots:
     void NumPressed();
     void on_btnLogin_clicked();
 
+    void on_btnClientInterface_clicked();
+
 private:
     Ui::Login *ui;
     int PIN[15];
