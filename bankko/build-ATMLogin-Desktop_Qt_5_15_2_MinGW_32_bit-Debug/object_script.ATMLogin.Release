@@ -1,0 +1,12 @@
+release/accevents.o
+release/acctype.o
+release/main.o
+release/login.o
+release/options.o
+release/saldoform.o
+release/varsingleton.o
+release/moc_accevents.o
+release/moc_acctype.o
+release/moc_login.o
+release/moc_options.o
+release/moc_saldoform.o

@@ -14,7 +14,17 @@ class Transactions_model extends CI_model
       //$this->db->where('CID',$client_id);
       //echo "Löydetyt tapahtumat:";
     }
-    /*return $query->affected_rows();*/
+    /*return $query->affected_rows();*/ 
     return $query->result_array();
   }
+
+  function balance ($client_id)
+  {  
+    $this->db->select("Balance");
+    $this->db->from("Account");
+    $this->db->where('idClient',$client_id);
+    /*return $query->affected_rows();*/
+    return $this->db->get()->row("Balance");
+  }
+
 }
