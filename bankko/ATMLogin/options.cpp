@@ -3,6 +3,7 @@
 #include "accevents.h"
 #include "varsingleton.h"
 #include "saldoform.h"
+#include "withdraw2.h"
 
 #include <QtNetwork>
 #include <QNetworkAccessManager>
@@ -118,5 +119,13 @@ void Options::on_btnBalance_clicked()
 
 void Options::on_btnSuljeOptions_clicked()
 {
+    this->close();
+}
+
+void Options::on_btnWithdraw_clicked()
+{
+
+    Withdraw2 *var=new Withdraw2();
+    var->show();
     this->close();
 }
