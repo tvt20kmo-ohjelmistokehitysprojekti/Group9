@@ -8,12 +8,8 @@ class Withdraw_model extends CI_model
 {
   function Withdraw($card, $amount){
     $data = array('acc'=> $card,'amount'=> $amount);
-    $this->db->query("call withdrawal(?,?)",$data);
-    if($this->db->affected_rows()){
-      return TRUE;
-    }
-    else {
-      return FALSE;
-    }
+    $query=$this->db->query("call withdrawal(?,?)",$data);
+
+    return $query->result();
   }
 }

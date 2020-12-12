@@ -2,7 +2,6 @@
 #include "ui_options.h"
 #include "accevents.h"
 #include "varsingleton.h"
-#include "saldoform.h"
 
 #include <QtNetwork>
 #include <QNetworkAccessManager>
@@ -78,43 +77,8 @@ void Options::on_btnEvents_clicked()
 
 void Options::on_btnBalance_clicked()
 {
-    QString accType;
-    int idClient=5;
-    accType="DEBIT";
-    QVariant Client=QVariant(idClient);
 
-    QNetworkRequest request(QUrl("http://www.students.oamk.fi/~t9arar00/Group9/RestApi-master/index.php/api/transactions/balance?client_id="+Client.toString()));
-        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-        //Authenticate
-        QString username="root";
-        QString password="root";
-        QString concatenatedCredentials = username + ":" + password;
-           QByteArray data = concatenatedCredentials.toLocal8Bit().toBase64();
-          QString headerData = "Basic " + data;
-           request.setRawHeader( "Authorization", headerData.toLocal8Bit() );
-
-        QNetworkAccessManager nam;
-        QNetworkReply *reply = nam.get(request);
-        while (!reply->isFinished())
-        {
-            qApp->processEvents();
-        }
-        QByteArray response_data = reply->readAll();
-
-        qDebug()<<"response="+response_data;
-        QJsonDocument json_doc = QJsonDocument::fromJson(response_data);
-
-
-        SaldoForm *sf = new SaldoForm();
-        //sf-> setSaldoFromMain(response_data);
-        sf->show();
-
-        reply->deleteLater();
 }
-
-
-
-
 
 void Options::on_btnSuljeOptions_clicked()
 {

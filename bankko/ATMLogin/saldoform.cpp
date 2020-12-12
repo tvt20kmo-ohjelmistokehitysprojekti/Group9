@@ -49,10 +49,6 @@ void SaldoForm::on_btnSaldo_clicked()
 
       ui->labelSaldo->setText(response_data);
 
-
-
-
-
 }
 
 void SaldoForm::on_btnSuljeSaldo_clicked()

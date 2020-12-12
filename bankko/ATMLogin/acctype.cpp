@@ -8,16 +8,16 @@
 #include <QJsonDocument>
 #include <qjsondocument.h>
 
-AccType::AccType(QWidget *parent) :
+acctype::acctype(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::AccType)
+    ui(new Ui::acctype)
 {
     ui->setupUi(this);
     delete ui;
     ui=nullptr;
 }
 
-AccType::~AccType()
+acctype::~acctype()
 {
     VarSingleton *var=VarSingleton::getInstance();
     delete var;
@@ -26,15 +26,16 @@ AccType::~AccType()
     ui=nullptr;
 }
 
-void AccType::on_btnCredit_clicked()
+void acctype::on_btnCredit_clicked()
 {
     QString accType, idClient, PIN;
     accType="CREDIT";
 
     VarSingleton *var=VarSingleton::getInstance();
     idClient=var->getIdClient();
+    qDebug()<<"idClient: "+idClient;
 
-    QNetworkRequest request(QUrl("http://www.students.oamk.fi/~t9arar00/Group9/RestApi-master/index.php/api/client/idaccount/?idClient="+idClient+"&accType=CREDIT"));
+    QNetworkRequest request(QUrl("http://www.students.oamk.fi/~t9arar00/Group9/RestApi-master/index.php/api/Client/idAccount/?idClient="+idClient+"&accType=CREDIT"));
         request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
         //Authenticate
         QString username="root";
@@ -60,24 +61,31 @@ void AccType::on_btnCredit_clicked()
         foreach (const QJsonValue &value, jsarr){
             QJsonObject jsob = value.toObject();
             idAccount+=jsob["idAccount"].toString();
-            qDebug()<<idAccount;
+            qDebug()<<"idAccount on "+idAccount;
         }
 
-        reply->deleteLater();
+    reply->deleteLater();
 
-    if(idAccount.isNull()){
-        ui->labelError->setText(accType+"-tiliä ei ole");
-    } else{
+    //qDebug()<<"idAccount on: "+idAccount;
+    qDebug()<<idAccount.length();
+
+    if(idAccount.length()>0){
+        qDebug()<<"testi2";
         var->setIdAccount(idAccount);
         var->setAccType(accType);
 
         Options *opt = new Options();
         opt->show();
+
+    }
+    if(idAccount.length()==0){
+        qDebug()<<"testi";
+        ui->labelError->setText("halloota");
     }
 
 }
 
-void AccType::on_btnDebit_clicked()
+void acctype::on_btnDebit_clicked()
 {
     QString accType, idClient, PIN;
     accType="DEBIT";
@@ -109,30 +117,28 @@ void AccType::on_btnDebit_clicked()
         QJsonArray jsarr = json_doc.array();
 
         QString idAccount;
+
         foreach (const QJsonValue &value, jsarr){
             QJsonObject jsob = value.toObject();
             idAccount+=jsob["idAccount"].toString();
-            qDebug()<<idAccount;
+            qDebug()<<"idAccount on: "+idAccount;
         }
 
         reply->deleteLater();
 
-    if(idAccount.isNull()){
-        ui->labelError->setText(accType+"-tiliä ei ole");
-    } else{
-        var->setIdAccount(idAccount);
-        var->setAccType(accType);
+        //qDebug()<<"idAccount on: "+idAccount;
+        //qDebug()<<idAccount.length();
 
-        Options *opt = new Options();
-        opt->show();
-    }
+        if(idAccount.length()>0){
+            qDebug()<<"testi2";
+            var->setIdAccount(idAccount);
+            var->setAccType(accType);
 
-
-
-
-}
-
-void AccType::on_btnSuljeAcctype_clicked()
-{
-    this->close();
+            Options *opt = new Options();
+            opt->show();
+        }
+        if(idAccount.length()==0){
+            ui->labelError->setText("halloota");
+            qDebug()<<"testi";
+        }
 }

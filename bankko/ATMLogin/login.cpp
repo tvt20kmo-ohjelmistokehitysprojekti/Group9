@@ -107,8 +107,8 @@ void Login::on_btnLogin_clicked()
             VarSingleton *var = VarSingleton::getInstance();
             var->setIdClient(cardID);
 
-            AccType *AC = new AccType();
-            AC->show();
+            acctype *ac=new acctype();
+            ac->show();
         }
         else{
             ui->labelLoginResult->setText("Wrong ID or PIN");
