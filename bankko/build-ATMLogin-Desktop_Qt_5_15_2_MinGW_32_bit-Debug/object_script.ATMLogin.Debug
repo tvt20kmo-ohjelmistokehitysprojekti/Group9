@@ -1,0 +1,12 @@
+debug/accevents.o
+debug/acctype.o
+debug/main.o
+debug/login.o
+debug/options.o
+debug/saldoform.o
+debug/varsingleton.o
+debug/moc_accevents.o
+debug/moc_acctype.o
+debug/moc_login.o
+debug/moc_options.o
+debug/moc_saldoform.o
