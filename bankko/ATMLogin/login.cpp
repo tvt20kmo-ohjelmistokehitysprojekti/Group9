@@ -113,6 +113,7 @@ void Login::on_btnLogin_clicked()
         else{
             ui->labelLoginResult->setText("Wrong ID or PIN");
         }
+        this->close();
 
 }
 

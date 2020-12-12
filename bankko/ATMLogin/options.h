@@ -24,6 +24,8 @@ private slots:
 
     void on_btnSuljeOptions_clicked();
 
+    void on_btnWithdraw_clicked();
+
 private:
     Ui::Options *ui;
 };

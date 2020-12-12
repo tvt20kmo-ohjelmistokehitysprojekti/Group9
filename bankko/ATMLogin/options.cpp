@@ -84,3 +84,11 @@ void Options::on_btnSuljeOptions_clicked()
 {
     this->close();
 }
+
+void Options::on_btnWithdraw_clicked()
+{
+
+    Withdraw2 *var=new Withdraw2();
+    var->show();
+    this->close();
+}
