@@ -26,6 +26,8 @@ private slots:
 
     void on_btnWithdraw_clicked();
 
+    void on_btnDeposit_clicked();
+
 private:
     Ui::Options *ui;
 };

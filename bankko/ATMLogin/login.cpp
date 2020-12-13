@@ -2,6 +2,7 @@
 #include "ui_login.h"
 #include "acctype.h"
 #include "varsingleton.h"
+#include "clientadder.h"
 
 #include <QtNetwork>
 #include <QNetworkAccessManager>
@@ -118,3 +119,9 @@ void Login::on_btnLogin_clicked()
 }
 
 
+
+void Login::on_btnClientInterface_clicked()
+{
+    ClientAdder *AC = new ClientAdder();
+    AC->show();
+}

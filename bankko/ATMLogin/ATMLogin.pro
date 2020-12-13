@@ -11,6 +11,8 @@ CONFIG += c++11
 SOURCES += \
     accevents.cpp \
     acctype.cpp \
+    clientadder.cpp \
+    deposit.cpp \
     main.cpp \
     login.cpp \
     options.cpp \
@@ -21,6 +23,8 @@ SOURCES += \
 HEADERS += \
     accevents.h \
     acctype.h \
+    clientadder.h \
+    deposit.h \
     login.h \
     options.h \
     saldoform.h \
@@ -30,6 +34,8 @@ HEADERS += \
 FORMS += \
     accevents.ui \
     acctype.ui \
+    clientadder.ui \
+    deposit.ui \
     login.ui \
     options.ui \
     saldoform.ui \
