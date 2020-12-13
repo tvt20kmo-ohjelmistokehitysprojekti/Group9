@@ -11,9 +11,12 @@ class Login extends CI_Controller
 
     if(password_verify($plaintext_password,$encrypted_password)){
       $result=true;
+      //echo $plaintext_password;
     }
     else{
       $result=false;
+      //echo $plaintext_password;
+      
     }
     echo json_encode($result);
   }
