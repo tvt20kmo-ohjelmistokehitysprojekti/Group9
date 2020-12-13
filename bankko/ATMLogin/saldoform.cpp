@@ -12,6 +12,13 @@ SaldoForm::SaldoForm(QWidget *parent) :
     ui(new Ui::SaldoForm)
 {
     ui->setupUi(this);
+
+    this->setStyleSheet("background-color: #0369d7;");
+    ui->btnSaldo->setStyleSheet("background-color:white;");
+    ui->btnSuljeSaldo->setStyleSheet("background-color:white;");
+
+    ui->labelSaldo->setStyleSheet("color:white;");
+
 }
 
 SaldoForm::~SaldoForm()

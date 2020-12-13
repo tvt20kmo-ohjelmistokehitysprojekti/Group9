@@ -17,6 +17,48 @@ Deposit::Deposit(QWidget *parent) :
     ui(new Ui::Deposit)
 {
     ui->setupUi(this);
+
+    this->setStyleSheet("background-color: #0369d7;");
+
+    ui->btn100e->setStyleSheet("background-color:white;");
+    ui->btn10c->setStyleSheet("background-color:white;");
+    ui->btn10e->setStyleSheet("background-color:white;");
+    ui->btn1c->setStyleSheet("background-color:white;");
+    ui->btn1e->setStyleSheet("background-color:white;");
+    ui->btn200e->setStyleSheet("background-color:white;");
+    ui->btn20c->setStyleSheet("background-color:white;");
+    ui->btn20e->setStyleSheet("background-color:white;");
+    ui->btn2c->setStyleSheet("background-color:white;");
+    ui->btn2e->setStyleSheet("background-color:white;");
+    ui->btn500e->setStyleSheet("background-color:white;");
+    ui->btn50c->setStyleSheet("background-color:white;");
+    ui->btn50e->setStyleSheet("background-color:white;");
+    ui->btn5c->setStyleSheet("background-color:white;");
+    ui->btn5e->setStyleSheet("background-color:white;");
+    ui->btnCountAgain->setStyleSheet("background-color:white;");
+    ui->btnDeposit->setStyleSheet("background-color:white;");
+    ui->pushButton->setStyleSheet("background-color:white;");
+
+    ui->labelInfo->setStyleSheet("color:white;");
+    ui->label_7->setStyleSheet("color:white;");
+    ui->label_8->setStyleSheet("color:white;");
+    ui->lbl100e->setStyleSheet("color:white;");
+    ui->lbl10c->setStyleSheet("color:white;");
+    ui->lbl10e->setStyleSheet("color:white;");
+    ui->lbl1c->setStyleSheet("color:white;");
+    ui->lbl1e->setStyleSheet("color:white;");
+    ui->lbl200e->setStyleSheet("color:white;");
+    ui->lbl20c->setStyleSheet("color:white;");
+    ui->lbl20e->setStyleSheet("color:white;");
+    ui->lbl2c->setStyleSheet("color:white;");
+    ui->lbl2e->setStyleSheet("color:white;");
+    ui->lbl500e->setStyleSheet("color:white;");
+    ui->lbl50c->setStyleSheet("color:white;");
+    ui->lbl50e->setStyleSheet("color:white;");
+    ui->lbl5c->setStyleSheet("color:white;");
+    ui->lbl5e->setStyleSheet("color:white;");
+    ui->lblTotalAmount->setStyleSheet("color:white;");
+
 }
 
 Deposit::~Deposit()

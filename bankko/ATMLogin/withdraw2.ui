@@ -100,7 +100,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Or enter another amount</string>
+    <string>Muu summa</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -118,7 +118,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Amount</string>
+    <string>Anna summa:</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="addAmount">
@@ -164,7 +164,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Exit</string>
+    <string>Sulje</string>
    </property>
   </widget>
  </widget>

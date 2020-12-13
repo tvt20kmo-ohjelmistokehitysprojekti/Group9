@@ -28,7 +28,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Deposit</string>
+    <string>Valmis</string>
    </property>
   </widget>
   <widget class="QLabel" name="lbl1c">
@@ -160,7 +160,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Count again</string>
+    <string>Aloita alusta</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn2c">
@@ -333,7 +333,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Total Amount:</string>
+    <string>Kokonaissumma</string>
    </property>
   </widget>
   <widget class="QLabel" name="lbl500e">
@@ -720,7 +720,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Deposit</string>
+    <string>Talletus</string>
    </property>
   </widget>
   <widget class="QLabel" name="lbl10c">
@@ -859,7 +859,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Close</string>
+    <string>Sulje</string>
    </property>
   </widget>
  </widget>

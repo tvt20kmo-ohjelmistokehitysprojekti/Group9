@@ -17,6 +17,18 @@ Options::Options(QWidget *parent) :
     ui(new Ui::Options)
 {
     ui->setupUi(this);
+
+    this->setStyleSheet("background-color: #0369d7;");
+    ui->btnSuljeOptions->setStyleSheet("background-color:white;");
+    ui->btnBalance->setStyleSheet("background-color:white;");
+    ui->btnEvents->setStyleSheet("background-color:white;");
+    ui->btnWithdraw->setStyleSheet("background-color:white;");
+    ui->btnDeposit->setStyleSheet("background-color:white;");
+    ui->btnTest->setStyleSheet("background-color:white;");
+
+    ui->labelCard_2->setStyleSheet("color:white;");
+
+    //ui->lineEditCard->setStyleSheet("color:white;");
 }
 
 Options::~Options()
@@ -26,6 +38,7 @@ Options::~Options()
     var=nullptr;
     delete ui;
     ui=nullptr;
+
 }
 
 void Options::on_btnEvents_clicked()

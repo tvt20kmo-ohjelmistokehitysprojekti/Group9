@@ -49,24 +49,6 @@
     <string>Debit</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>10</y>
-     <width>611</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>48</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Valitse tili</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="labelPIN">
    <property name="geometry">
     <rect>
@@ -80,43 +62,73 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelError">
+  <widget class="QPushButton" name="btnSuljeAcctype">
    <property name="geometry">
     <rect>
+
+     <x>440</x>
+     <y>580</y>
+     <width>171</width>
+     <height>61</height>
+
      <x>0</x>
      <y>460</y>
      <width>651</width>
      <height>91</height>
+
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>31</pointsize>
+     <pointsize>24</pointsize>
     </font>
+   </property>
+   <property name="text">
+    <string>Sulje</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelError">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>490</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
    </property>
    <property name="text">
     <string/>
    </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
   </widget>
+
+  <widget class="QLabel" name="labelValitseTilityyppi">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>411</width>
+
   <widget class="QPushButton" name="btnCloseFrom">
    <property name="geometry">
     <rect>
      <x>460</x>
      <y>580</y>
      <width>171</width>
+
      <height>81</height>
     </rect>
    </property>
    <property name="font">
     <font>
+
+     <pointsize>48</pointsize>
+
      <pointsize>19</pointsize>
+
     </font>
    </property>
    <property name="text">
-    <string>Sulje</string>
+    <string>Valitse tili</string>
    </property>
   </widget>
  </widget>
