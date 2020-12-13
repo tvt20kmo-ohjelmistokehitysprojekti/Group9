@@ -16,9 +16,30 @@ Login::Login(QWidget *parent)
     , ui(new Ui::Login)
 {
     ui->setupUi(this);
+    this->setStyleSheet("background-color: #0369d7;");
+
+    ui->btnClientInterface->setStyleSheet("background-color:blue;");
+    ui->btn0->setStyleSheet("background-color:white;");
+    ui->btn1->setStyleSheet("background-color:white;");
+    ui->btn2->setStyleSheet("background-color:white;");
+    ui->btn3->setStyleSheet("background-color:white;");
+    ui->btn4->setStyleSheet("background-color:white;");
+    ui->btn5->setStyleSheet("background-color:white;");
+    ui->btn6->setStyleSheet("background-color:white;");
+    ui->btn7->setStyleSheet("background-color:white;");
+    ui->btn8->setStyleSheet("background-color:white;");
+    ui->btn9->setStyleSheet("background-color:white;");
+    ui->btnLogin->setStyleSheet("background-color:white;");
+    ui->label_2->setStyleSheet("color:white;");
+    ui->label_3->setStyleSheet("color:white;");
+    ui->lineEditCard->setStyleSheet("color:white;");
+
+
+
 
     QPushButton *nmbrButtons[10];
-    for(int i=0; i<10; i++){
+    for(int i=0; i<10; i++)
+    {
         QString btnName="btn"+QString::number(i);
         nmbrButtons[i]=Login::findChild<QPushButton*>(btnName);
         connect(nmbrButtons[i], SIGNAL(released()), this, SLOT(NumPressed()));
@@ -50,6 +71,8 @@ void Login::NumPressed()
     QString btnVal=btn->text(); //nappien arvot tulee niiden teksteistä
     int arvo=btnVal.toInt();
 
+
+
     qDebug()<<"Syöttö: " +btnVal;
 
     if((last>=0) && (last<4)){
@@ -58,6 +81,7 @@ void Login::NumPressed()
         qDebug()<<PIN[last];
 
         ui->lineEditPIN->insert(" * ");
+        ui->lineEditPIN->setStyleSheet("color:white;");
 
         if(last==3)
         {

@@ -12,6 +12,17 @@ Withdraw2::Withdraw2(QWidget *parent) :
     ui(new Ui::Withdraw2)
 {
     ui->setupUi(this);
+    this->setStyleSheet("background-color: #0369d7;");
+    ui->btnexit->setStyleSheet("background-color:white;");
+    ui->otheramount->setStyleSheet("background-color:white;");
+    ui->btnfifty->setStyleSheet("background-color:white;");
+    ui->btnfourty->setStyleSheet("background-color:white;");
+    ui->btnhundred->setStyleSheet("background-color:white;");
+    ui->btntwenty->setStyleSheet("background-color:white;");
+
+    ui->label_2->setStyleSheet("color:white;");
+    ui->label->setStyleSheet("color:white;");
+    ui->addAmount->setStyleSheet("background-color:white;");
 }
 
 Withdraw2::~Withdraw2()

@@ -13,6 +13,13 @@ AccType::AccType(QWidget *parent) :
     ui(new Ui::AccType)
 {
     ui->setupUi(this);
+
+    this->setStyleSheet("background-color: #0369d7;");
+    ui->btnCredit->setStyleSheet("background-color:white;");
+    ui->btnDebit->setStyleSheet("background-color:white;");
+    ui->labelValitseTilityyppi->setStyleSheet("color:white;");
+    ui->btnSuljeAcctype->setStyleSheet("background-color:white;");
+
     delete ui;
     ui=nullptr;
 }
