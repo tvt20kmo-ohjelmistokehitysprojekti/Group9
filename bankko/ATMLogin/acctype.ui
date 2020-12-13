@@ -65,10 +65,17 @@
   <widget class="QPushButton" name="btnSuljeAcctype">
    <property name="geometry">
     <rect>
+
      <x>440</x>
      <y>580</y>
      <width>171</width>
      <height>61</height>
+
+     <x>0</x>
+     <y>460</y>
+     <width>651</width>
+     <height>91</height>
+
     </rect>
    </property>
    <property name="font">
@@ -93,18 +100,31 @@
     <string/>
    </property>
   </widget>
+
   <widget class="QLabel" name="labelValitseTilityyppi">
    <property name="geometry">
     <rect>
      <x>40</x>
      <y>30</y>
      <width>411</width>
+
+  <widget class="QPushButton" name="btnCloseFrom">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>580</y>
+     <width>171</width>
+
      <height>81</height>
     </rect>
    </property>
    <property name="font">
     <font>
+
      <pointsize>48</pointsize>
+
+     <pointsize>19</pointsize>
+
     </font>
    </property>
    <property name="text">

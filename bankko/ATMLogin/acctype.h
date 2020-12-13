@@ -22,6 +22,8 @@ private slots:
 
     void on_btnSuljeAcctype_clicked();
 
+    void on_btnCloseFrom_clicked();
+
 private:
     Ui::AccType *ui;
 };
