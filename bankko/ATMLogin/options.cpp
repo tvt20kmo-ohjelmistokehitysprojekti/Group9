@@ -24,7 +24,7 @@ Options::Options(QWidget *parent) :
     ui->btnEvents->setStyleSheet("background-color:white;");
     ui->btnWithdraw->setStyleSheet("background-color:white;");
     ui->btnDeposit->setStyleSheet("background-color:white;");
-    //ui->btnTest->setStyleSheet("background-color:white;");
+    ui->btnTest->setStyleSheet("background-color:white;");
 
     ui->labelCard_2->setStyleSheet("color:#f0df24;");
 
@@ -39,6 +39,14 @@ Options::~Options()
     delete ui;
     ui=nullptr;
 
+}
+
+void Options::on_btnTest_clicked()
+{
+    VarSingleton *var=VarSingleton::getInstance();
+    ui->labelCard2->setText(var->getIdClient());
+    ui->labelAccType->setText(var->getAccType());
+    ui->labelAccountID->setText(var->getIdAccount());
 }
 
 void Options::on_btnEvents_clicked()
@@ -86,10 +94,43 @@ void Options::on_btnEvents_clicked()
 
 void Options::on_btnBalance_clicked()
 {
+    QString accType;
+    int idClient=5;
+    accType="DEBIT";
+    QVariant Client=QVariant(idClient);
+
+    QNetworkRequest request(QUrl("http://www.students.oamk.fi/~t9arar00/Group9/RestApi-master/index.php/api/transactions/balance?client_id="+Client.toString()));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+        //Authenticate
+        QString username="root";
+        QString password="root";
+        QString concatenatedCredentials = username + ":" + password;
+           QByteArray data = concatenatedCredentials.toLocal8Bit().toBase64();
+          QString headerData = "Basic " + data;
+           request.setRawHeader( "Authorization", headerData.toLocal8Bit() );
+
+        QNetworkAccessManager nam;
+        QNetworkReply *reply = nam.get(request);
+        while (!reply->isFinished())
+        {
+            qApp->processEvents();
+        }
+        QByteArray response_data = reply->readAll();
+
+        qDebug()<<"response="+response_data;
+        QJsonDocument json_doc = QJsonDocument::fromJson(response_data);
+
+
         SaldoForm *sf = new SaldoForm();
         //sf-> setSaldoFromMain(response_data);
         sf->show();
+
+        reply->deleteLater();
 }
+
+
+
+
 
 void Options::on_btnSuljeOptions_clicked()
 {
@@ -98,6 +139,7 @@ void Options::on_btnSuljeOptions_clicked()
 
 void Options::on_btnWithdraw_clicked()
 {
+
     Withdraw2 *var=new Withdraw2();
     var->show();
     this->close();
@@ -105,6 +147,7 @@ void Options::on_btnWithdraw_clicked()
 
 void Options::on_btnDeposit_clicked()
 {
+
     Deposit *ca=new Deposit();
     ca->show();
 }

@@ -8,21 +8,23 @@
 #include <QJsonDocument>
 #include <qjsondocument.h>
 
-acctype::acctype(QWidget *parent) :
+AccType::AccType(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::acctype)
+    ui(new Ui::AccType)
 {
     ui->setupUi(this);
 
     this->setStyleSheet("background-color: #0369d7;");
     ui->btnCredit->setStyleSheet("background-color:white;");
     ui->btnDebit->setStyleSheet("background-color:white;");
-
     ui->labelValitseTilityyppi->setStyleSheet("color:#f0df24;");
     ui->btnSuljeAcctype->setStyleSheet("background-color:#96a8b1;");
+
+    delete ui;
+    ui=nullptr;
 }
 
-acctype::~acctype()
+AccType::~AccType()
 {
     VarSingleton *var=VarSingleton::getInstance();
     delete var;
@@ -31,121 +33,113 @@ acctype::~acctype()
     ui=nullptr;
 }
 
-void acctype::on_btnCredit_clicked()
+void AccType::on_btnCredit_clicked()
 {
     QString accType, idClient, PIN;
-        accType="CREDIT";
+    accType="CREDIT";
 
-        VarSingleton *var=VarSingleton::getInstance();
-        idClient=var->getIdClient();
-        qDebug()<<"idClient: "+idClient;
+    VarSingleton *var=VarSingleton::getInstance();
+    idClient=var->getIdClient();
 
-        QNetworkRequest request(QUrl("http://www.students.oamk.fi/~t9arar00/Group9/RestApi-master/index.php/api/Client/idAccount/?idClient="+idClient+"&accType=CREDIT"));
-            request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-            //Authenticate
-            QString username="root";
-            QString password="root";
-            QString concatenatedCredentials = username + ":" + password;
-               QByteArray data = concatenatedCredentials.toLocal8Bit().toBase64();
-               QString headerData = "Basic " + data;
-               request.setRawHeader( "Authorization", headerData.toLocal8Bit() );
+    QNetworkRequest request(QUrl("http://www.students.oamk.fi/~t9arar00/Group9/RestApi-master/index.php/api/client/idaccount/?idClient="+idClient+"&accType=CREDIT"));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+        //Authenticate
+        QString username="root";
+        QString password="root";
+        QString concatenatedCredentials = username + ":" + password;
+           QByteArray data = concatenatedCredentials.toLocal8Bit().toBase64();
+           QString headerData = "Basic " + data;
+           request.setRawHeader( "Authorization", headerData.toLocal8Bit() );
 
-               QNetworkAccessManager nam;
-               QNetworkReply *reply = nam.get(request);
-            while (!reply->isFinished())
-            {
-                qApp->processEvents();
-            }
-            QByteArray response_data = reply->readAll();
-            qDebug()<<response_data;
-            QJsonDocument json_doc = QJsonDocument::fromJson(response_data);
-            QJsonObject jsobj = json_doc.object();
-            QJsonArray jsarr = json_doc.array();
+           QNetworkAccessManager nam;
+           QNetworkReply *reply = nam.get(request);
+        while (!reply->isFinished())
+        {
+            qApp->processEvents();
+        }
+        QByteArray response_data = reply->readAll();
+        qDebug()<<response_data;
+        QJsonDocument json_doc = QJsonDocument::fromJson(response_data);
+        QJsonObject jsobj = json_doc.object();
+        QJsonArray jsarr = json_doc.array();
 
-            QString idAccount;
-            foreach (const QJsonValue &value, jsarr){
-                QJsonObject jsob = value.toObject();
-                idAccount+=jsob["idAccount"].toString();
-                qDebug()<<"idAccount on "+idAccount;}
-            reply->deleteLater();
+        QString idAccount;
+        foreach (const QJsonValue &value, jsarr){
+            QJsonObject jsob = value.toObject();
+            idAccount+=jsob["idAccount"].toString();
+            qDebug()<<idAccount;
+        }
 
-                //qDebug()<<"idAccount on: "+idAccount;
-                qDebug()<<idAccount.length();
+        reply->deleteLater();
 
-                if(idAccount.length()>0){
-                    qDebug()<<"testi2";
-                    var->setIdAccount(idAccount);
-                    var->setAccType(accType);
+    if(idAccount.isNull()){
+        ui->labelError->setText(accType+"-tiliä ei ole");
+    } else{
+        var->setIdAccount(idAccount);
+        var->setAccType(accType);
 
-                    Options *opt = new Options();
-                    opt->show();
+        Options *opt = new Options();
+        opt->show();
+    }
 
-                }
-                if(idAccount.length()==0){
-                    qDebug()<<"testi";
-                    //ui->btnCredit->setStyleSheet("QPushButton{ background-color: red }");
-                }
 }
 
-void acctype::on_btnDebit_clicked()
+void AccType::on_btnDebit_clicked()
 {
     QString accType, idClient, PIN;
-        accType="DEBIT";
+    accType="DEBIT";
 
-        VarSingleton *var=VarSingleton::getInstance();
-        idClient=var->getIdClient();
-        qDebug()<<"idClient: "+idClient;
+    VarSingleton *var=VarSingleton::getInstance();
+    idClient=var->getIdClient();
+    qDebug()<<"idClient: "+idClient;
 
-        QNetworkRequest request(QUrl("http://www.students.oamk.fi/~t9arar00/Group9/RestApi-master/index.php/api/client/idaccount/?idClient="+idClient+"&accType=DEBIT"));
-            request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-            //Authenticate
-            QString username="root";
-            QString password="root";
-            QString concatenatedCredentials = username + ":" + password;
-               QByteArray data = concatenatedCredentials.toLocal8Bit().toBase64();
-               QString headerData = "Basic " + data;
-               request.setRawHeader( "Authorization", headerData.toLocal8Bit() );
+    QNetworkRequest request(QUrl("http://www.students.oamk.fi/~t9arar00/Group9/RestApi-master/index.php/api/client/idaccount/?idClient="+idClient+"&accType=DEBIT"));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+        //Authenticate
+        QString username="root";
+        QString password="root";
+        QString concatenatedCredentials = username + ":" + password;
+           QByteArray data = concatenatedCredentials.toLocal8Bit().toBase64();
+           QString headerData = "Basic " + data;
+           request.setRawHeader( "Authorization", headerData.toLocal8Bit() );
 
-               QNetworkAccessManager nam;
-               QNetworkReply *reply = nam.get(request);
-            while (!reply->isFinished())
-            {
-                qApp->processEvents();
-            }
-            QByteArray response_data = reply->readAll();
+           QNetworkAccessManager nam;
+           QNetworkReply *reply = nam.get(request);
+        while (!reply->isFinished())
+        {
+            qApp->processEvents();
+        }
+        QByteArray response_data = reply->readAll();
 
-            QJsonDocument json_doc = QJsonDocument::fromJson(response_data);
-            QJsonObject jsobj = json_doc.object();
-            QJsonArray jsarr = json_doc.array();
+        QJsonDocument json_doc = QJsonDocument::fromJson(response_data);
+        QJsonObject jsobj = json_doc.object();
+        QJsonArray jsarr = json_doc.array();
 
-            QString idAccount;
+        QString idAccount;
+        foreach (const QJsonValue &value, jsarr){
+            QJsonObject jsob = value.toObject();
+            idAccount+=jsob["idAccount"].toString();
+            qDebug()<<idAccount;
+        }
 
-            foreach (const QJsonValue &value, jsarr){
-                QJsonObject jsob = value.toObject();
-                idAccount+=jsob["idAccount"].toString();
-                qDebug()<<"idAccount on: "+idAccount;
-            }
+        reply->deleteLater();
 
-            reply->deleteLater();
+    if(idAccount.isNull()){
+        ui->labelError->setText(accType+"-tiliä ei ole");
+    } else{
+        var->setIdAccount(idAccount);
+        var->setAccType(accType);
 
-            //qDebug()<<"idAccount on: "+idAccount;
-            //qDebug()<<idAccount.length();
+        Options *opt = new Options();
+        opt->show();
+    }
 
-            if(idAccount.length()>0){
-                qDebug()<<"testi2";
-                var->setIdAccount(idAccount);
-                var->setAccType(accType);
 
-                Options *opt = new Options();
-                opt->show();
-            }
-            if(idAccount.length()==0){
-                //ui->btnDebit->setStyleSheet("QPushButton{ background-color: red }");
-                qDebug()<<"testi";
-            }
+
+
 }
 
-void acctype::on_btnClose_clicked()
+void AccType::on_btnSuljeAcctype_clicked()
 {
     this->close();
 }
