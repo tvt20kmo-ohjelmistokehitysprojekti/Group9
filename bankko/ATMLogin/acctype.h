@@ -4,26 +4,26 @@
 #include <QWidget>
 
 namespace Ui {
-class AccType;
+class acctype;
 }
 
-class AccType : public QWidget
+class acctype : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit AccType(QWidget *parent = nullptr);
-    ~AccType();
+    explicit acctype(QWidget *parent = nullptr);
+    ~acctype();
 
 private slots:
     void on_btnCredit_clicked();
 
     void on_btnDebit_clicked();
 
-    void on_btnSuljeAcctype_clicked();
+    void on_btnClose_clicked();
 
 private:
-    Ui::AccType *ui;
+    Ui::acctype *ui;
 };
 
 #endif // ACCTYPE_H

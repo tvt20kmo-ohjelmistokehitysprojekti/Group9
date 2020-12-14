@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AccType</class>
- <widget class="QWidget" name="AccType">
+ <class>acctype</class>
+ <widget class="QWidget" name="acctype">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,13 +13,31 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>28</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Valitse tili</string>
+   </property>
+  </widget>
   <widget class="QPushButton" name="btnCredit">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>240</y>
-     <width>321</width>
-     <height>91</height>
+     <x>210</x>
+     <y>180</y>
+     <width>241</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -34,10 +52,10 @@
   <widget class="QPushButton" name="btnDebit">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>350</y>
-     <width>321</width>
-     <height>91</height>
+     <x>210</x>
+     <y>270</y>
+     <width>241</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -49,25 +67,12 @@
     <string>Debit</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelPIN">
+  <widget class="QPushButton" name="btnClose">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>240</y>
-     <width>151</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnSuljeAcctype">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>580</y>
-     <width>171</width>
+     <x>490</x>
+     <y>530</y>
+     <width>121</width>
      <height>61</height>
     </rect>
    </property>
@@ -78,37 +83,6 @@
    </property>
    <property name="text">
     <string>Sulje</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelError">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>490</y>
-     <width>331</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelValitseTilityyppi">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>30</y>
-     <width>411</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>48</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Valitse tili</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">

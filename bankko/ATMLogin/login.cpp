@@ -8,8 +8,10 @@
 #include <QNetworkAccessManager>
 #include <QJsonDocument>
 #include <qjsondocument.h>
+#include <QPushButton>
 
 int last=0;
+int loginTry=0;
 
 Login::Login(QWidget *parent)
     : QMainWindow(parent)
@@ -77,13 +79,21 @@ void Login::NumPressed()
 
     qDebug()<<"Syöttö: " +btnVal;
 
+    //qDebug()<<"Syöttö: " +btnVal;
+
+
     if((last>=0) && (last<4)){
         PIN[last]=arvo;
 
+        qDebug()<<last;
         qDebug()<<PIN[last];
+
 
         ui->lineEditPIN->insert(" * ");
         ui->lineEditPIN->setStyleSheet("color:white;");
+
+        ui->lineEditPIN->insert("*");
+
 
         if(last==3)
         {
@@ -105,6 +115,7 @@ void Login::on_btnLogin_clicked()
     QString cardID;
 
     cardID=ui->lineEditCard->text();
+    qDebug()<<"idClient:"+cardID;
 
     QNetworkRequest request(QUrl("http://www.students.oamk.fi/~t9arar00/Group9/RestApi-master/index.php/api/login/check_login/?idClient="+cardID+"&password="+PIN));
         request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
@@ -134,17 +145,21 @@ void Login::on_btnLogin_clicked()
             VarSingleton *var = VarSingleton::getInstance();
             var->setIdClient(cardID);
 
-            AccType *AC = new AccType();
+            acctype *AC = new acctype();
             AC->show();
         }
         else{
-            ui->labelLoginResult->setText("Wrong ID or PIN");
+            if(loginTry<2){
+                ui->labelLoginResult->setText("Wrong ID or PIN");
+                ui->lineEditPIN->clear();
+                last=0;
+                loginTry++;
+            } else{
+                ui->labelLoginResult->setText("Too many login attempts!");
+                ui->btnLogin->setStyleSheet("QPushButton{ background-color: red }");
+            }
         }
-        this->close();
-
 }
-
-
 
 void Login::on_btnClientInterface_clicked()
 {
