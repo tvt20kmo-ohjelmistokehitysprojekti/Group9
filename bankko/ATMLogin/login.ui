@@ -1373,14 +1373,83 @@
    <widget class="QPushButton" name="btnClientInterface">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
+      <x>480</x>
+      <y>580</y>
       <width>141</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string>Add Client DO NOT PRESS</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBankko">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>570</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../../Users/Anni/Desktop/Bankko22.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTervetuloa">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>10</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tervetuloa </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBankkoon">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>20</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Algerian</family>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Bankkoon!</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>510</y>
+      <width>221</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../../Users/Anni/Desktop/Bankko3.jpg</pixmap>
     </property>
    </widget>
   </widget>

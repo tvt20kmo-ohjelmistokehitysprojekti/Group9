@@ -20,7 +20,7 @@ Login::Login(QWidget *parent)
     ui->setupUi(this);
     this->setStyleSheet("background-color: #0369d7;");
 
-    ui->btnClientInterface->setStyleSheet("background-color:blue;");
+    ui->btnClientInterface->setStyleSheet("background-color:#f0df24;");
     ui->btn0->setStyleSheet("background-color:white;");
     ui->btn1->setStyleSheet("background-color:white;");
     ui->btn2->setStyleSheet("background-color:white;");
@@ -34,6 +34,8 @@ Login::Login(QWidget *parent)
     ui->btnLogin->setStyleSheet("background-color:white;");
     ui->label_2->setStyleSheet("color:white;");
     ui->label_3->setStyleSheet("color:white;");
+    ui->labelTervetuloa->setStyleSheet("color:#f0df24;");
+    ui->labelBankkoon->setStyleSheet("color:#f0df24;");
     ui->lineEditCard->setStyleSheet("color:white;");
 
 

@@ -22,9 +22,9 @@
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>150</y>
-     <width>271</width>
-     <height>91</height>
+     <y>320</y>
+     <width>381</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="palette">
@@ -107,7 +107,7 @@
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>30</y>
+     <y>200</y>
      <width>271</width>
      <height>91</height>
     </rect>
@@ -137,6 +137,48 @@
    </property>
    <property name="text">
     <string>Sulje</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>580</y>
+     <width>101</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../../../Users/Anni/Desktop/Bankko22.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPainaSaldo">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>20</y>
+     <width>431</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Paina &quot;Näytä saldo&quot;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPainaSaldo2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>100</y>
+     <width>501</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>nähdäksesi tilisi saldon</string>
    </property>
   </widget>
  </widget>
