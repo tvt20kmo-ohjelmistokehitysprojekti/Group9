@@ -143,7 +143,7 @@ void Login::on_btnLogin_clicked()
             VarSingleton *var = VarSingleton::getInstance();
             var->setIdClient(cardID);
 
-            AccType *AC = new AccType();
+            acctype *AC = new acctype();
             AC->show();
         }
         else{

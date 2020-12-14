@@ -16,6 +16,7 @@ SOURCES += \
     main.cpp \
     login.cpp \
     options.cpp \
+    receipt.cpp \
     saldoform.cpp \
     varsingleton.cpp \
     withdraw2.cpp
@@ -27,6 +28,7 @@ HEADERS += \
     deposit.h \
     login.h \
     options.h \
+    receipt.h \
     saldoform.h \
     varsingleton.h \
     withdraw2.h
@@ -38,6 +40,7 @@ FORMS += \
     deposit.ui \
     login.ui \
     options.ui \
+    receipt.ui \
     saldoform.ui \
     withdraw2.ui
 

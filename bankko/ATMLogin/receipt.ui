@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>acctype</class>
- <widget class="QWidget" name="acctype">
+ <class>Receipt</class>
+ <widget class="QWidget" name="Receipt">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,67 +13,13 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QPushButton" name="btnsulje">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>20</y>
-     <width>161</width>
+     <x>530</x>
+     <y>612</y>
+     <width>91</width>
      <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>28</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Valitse tili</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnCredit">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>180</y>
-     <width>241</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>24</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Credit</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnDebit">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>270</y>
-     <width>241</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>24</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Debit</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnClose">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>530</y>
-     <width>121</width>
-     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -83,6 +29,42 @@
    </property>
    <property name="text">
     <string>Sulje</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="btnreceipt">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>90</y>
+     <width>301</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Valitsemasi summa:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>30</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Kuitti</string>
    </property>
   </widget>
  </widget>
