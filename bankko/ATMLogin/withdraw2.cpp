@@ -1,7 +1,6 @@
 #include "withdraw2.h"
 #include "ui_withdraw2.h"
 #include "varsingleton.h"
-#include "receipt.h"
 
 #include <QtNetwork>
 #include <QNetworkAccessManager>
@@ -64,9 +63,6 @@ void Withdraw2::on_btntwenty_clicked()
         //ui->labelinfo->setText("Added : "+response_data);
         //this->on_btnShowBooks_clicked();
         reply->deleteLater();
-
-        //Receipt *re = new Receipt();
-        //re->show();
 }
 
 void Withdraw2::on_btnfourty_clicked()
@@ -101,8 +97,6 @@ void Withdraw2::on_btnfourty_clicked()
         //ui->labelinfo->setText("Added : "+response_data);
         //this->on_btnShowBooks_clicked();
         reply->deleteLater();
-        Receipt *re = new Receipt();
-        re->show();
 }
 
 void Withdraw2::on_btnfifty_clicked()
@@ -137,8 +131,6 @@ void Withdraw2::on_btnfifty_clicked()
         //ui->labelinfo->setText("Added : "+response_data);
         //this->on_btnShowBooks_clicked();
         reply->deleteLater();
-        Receipt *re = new Receipt();
-        re->show();
 }
 
 void Withdraw2::on_btnhundred_clicked()
@@ -173,8 +165,6 @@ void Withdraw2::on_btnhundred_clicked()
         //ui->labelinfo->setText("Added : "+response_data);
         //this->on_btnShowBooks_clicked();
         reply->deleteLater();
-        Receipt *re = new Receipt();
-        re->show();
 }
 
 void Withdraw2::on_otheramount_clicked()
@@ -210,10 +200,6 @@ void Withdraw2::on_otheramount_clicked()
         //ui->labelinfo->setText("Added : "+response_data);
         //this->on_btnotheramount_clicked();
         reply->deleteLater();
-        Receipt *re = new Receipt();
-        re->show();
-
-
 }
 
 void Withdraw2::on_btnexit_clicked()
