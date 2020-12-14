@@ -24,7 +24,7 @@ Options::Options(QWidget *parent) :
     ui->btnEvents->setStyleSheet("background-color:white;");
     ui->btnWithdraw->setStyleSheet("background-color:white;");
     ui->btnDeposit->setStyleSheet("background-color:white;");
-    ui->btnTest->setStyleSheet("background-color:white;");
+    //ui->btnTest->setStyleSheet("background-color:white;");
 
     ui->labelCard_2->setStyleSheet("color:#f0df24;");
 
