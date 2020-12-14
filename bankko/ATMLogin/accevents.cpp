@@ -14,8 +14,8 @@ accEvents::accEvents(QString events, QWidget *parent) :
     ui->txtEvents->setText(events);
 
     this->setStyleSheet("background-color: #0369d7;");
-    ui->btnSuljeAccevents->setStyleSheet("background-color:white;");
-    ui->label->setStyleSheet("color:white;");
+    ui->btnSuljeAccevents->setStyleSheet("background-color:#96a8b1;");
+    ui->label->setStyleSheet("color:#f0df24;");
     ui->txtEvents->setStyleSheet("color:white;");
 }
 

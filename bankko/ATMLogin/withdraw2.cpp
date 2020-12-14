@@ -14,7 +14,7 @@ Withdraw2::Withdraw2(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setStyleSheet("background-color: #0369d7;");
-    ui->btnexit->setStyleSheet("background-color:white;");
+    ui->btnexit->setStyleSheet("background-color:#96a8b1;");
     ui->otheramount->setStyleSheet("background-color:white;");
     ui->btnfifty->setStyleSheet("background-color:white;");
     ui->btnfourty->setStyleSheet("background-color:white;");
@@ -23,6 +23,7 @@ Withdraw2::Withdraw2(QWidget *parent) :
 
     ui->label_2->setStyleSheet("color:white;");
     ui->label->setStyleSheet("color:white;");
+    ui->labelValitseSumma->setStyleSheet("color:#f0df24;");
     ui->addAmount->setStyleSheet("background-color:white;");
 }
 
