@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="btntwenty">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>10</y>
+     <x>80</x>
+     <y>130</y>
      <width>81</width>
      <height>81</height>
     </rect>
@@ -34,8 +34,8 @@
   <widget class="QPushButton" name="btnfourty">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>140</y>
+     <x>80</x>
+     <y>260</y>
      <width>81</width>
      <height>81</height>
     </rect>
@@ -52,8 +52,8 @@
   <widget class="QPushButton" name="btnfifty">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>270</y>
+     <x>320</x>
+     <y>130</y>
      <width>81</width>
      <height>81</height>
     </rect>
@@ -70,8 +70,8 @@
   <widget class="QPushButton" name="btnhundred">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>400</y>
+     <x>320</x>
+     <y>260</y>
      <width>81</width>
      <height>81</height>
     </rect>
@@ -88,10 +88,10 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>530</y>
+     <x>60</x>
+     <y>400</y>
      <width>381</width>
-     <height>31</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -106,9 +106,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>590</y>
-     <width>121</width>
+     <x>60</x>
+     <y>470</y>
+     <width>221</width>
      <height>41</height>
     </rect>
    </property>
@@ -124,19 +124,19 @@
   <widget class="QLineEdit" name="addAmount">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>600</y>
+     <x>300</x>
+     <y>470</y>
      <width>113</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
   </widget>
   <widget class="QPushButton" name="otheramount">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>580</y>
-     <width>51</width>
+     <x>460</x>
+     <y>470</y>
+     <width>111</width>
      <height>51</height>
     </rect>
    </property>
@@ -152,9 +152,9 @@
   <widget class="QPushButton" name="btnexit">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>10</y>
-     <width>91</width>
+     <x>460</x>
+     <y>570</y>
+     <width>171</width>
      <height>81</height>
     </rect>
    </property>
@@ -165,6 +165,40 @@
    </property>
    <property name="text">
     <string>Sulje</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelValitseSumma">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>571</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Valitse nostettava summa</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>590</y>
+     <width>111</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../../../Users/Anni/Desktop/Bankko22.jpg</pixmap>
    </property>
   </widget>
  </widget>

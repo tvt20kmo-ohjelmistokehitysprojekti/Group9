@@ -15,9 +15,11 @@ SaldoForm::SaldoForm(QWidget *parent) :
 
     this->setStyleSheet("background-color: #0369d7;");
     ui->btnSaldo->setStyleSheet("background-color:white;");
-    ui->btnSuljeSaldo->setStyleSheet("background-color:white;");
+    ui->btnSuljeSaldo->setStyleSheet("background-color:#96a8b1;");
 
     ui->labelSaldo->setStyleSheet("color:white;");
+    ui->labelPainaSaldo->setStyleSheet("color:#f0df24;");
+    ui->labelPainaSaldo2->setStyleSheet("color:#f0df24;");
 
 }
 
@@ -55,9 +57,6 @@ void SaldoForm::on_btnSaldo_clicked()
         reply->deleteLater();
 
       ui->labelSaldo->setText(response_data);
-
-
-
 
 
 }

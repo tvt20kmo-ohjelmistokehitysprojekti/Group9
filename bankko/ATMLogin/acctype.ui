@@ -111,6 +111,22 @@
     <string>Valitse tili</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>590</y>
+     <width>111</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../../../Users/Anni/Desktop/Bankko22.jpg</pixmap>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

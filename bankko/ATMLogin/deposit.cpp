@@ -37,11 +37,11 @@ Deposit::Deposit(QWidget *parent) :
     ui->btn5e->setStyleSheet("background-color:white;");
     ui->btnCountAgain->setStyleSheet("background-color:white;");
     ui->btnDeposit->setStyleSheet("background-color:white;");
-    ui->pushButton->setStyleSheet("background-color:white;");
+    ui->pushButton->setStyleSheet("background-color:#96a8b1;");
 
-    ui->labelInfo->setStyleSheet("color:white;");
+    ui->labelInfo->setStyleSheet("color:#f0df24;");
     ui->label_7->setStyleSheet("color:white;");
-    ui->label_8->setStyleSheet("color:white;");
+    ui->label_8->setStyleSheet("color:#f0df24;");
     ui->lbl100e->setStyleSheet("color:white;");
     ui->lbl10c->setStyleSheet("color:white;");
     ui->lbl10e->setStyleSheet("color:white;");
